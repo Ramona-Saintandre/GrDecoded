@@ -1,5 +1,27 @@
 ## Mona's notes and issues
 
+[how to deploy an angular app](https://medium.com/coinmonks/how-to-deploy-an-angular-app-8db1af39f8c1)
+
+ **Port already in use**
+
+*For linux users:*  
+
+`sudo kill $(sudo lsof -t -i:4200)`  
+You could also try this:
+
+sudo kill `sudo lsof -t -i:4200`
+
+*For windows users:*  
+
+Port number 4200 is already in use.  
+Open the cmd as administrator.    
+Type below command in cmd:  
+
+`netstat -a -n -o`
+And then, find port with port number 4200 by right click on terminal and click find, enter 4200 in "find what"   and click "find next": Let say you found that port number 4200 is used by pid 18932. Type below command in cmd:  
+
+`taskkill -f /pid 18932`
+
 ### TODO:
 Map Api
 Github Branches 
